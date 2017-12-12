@@ -12,14 +12,12 @@
 
 NAME = libft.a
 
-SRC = ./SRCS/
-
 OPTION = -c
 
 FLAG = -Wall -Werror -Wextra
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) libft.h $(SRC)*.c
+	gcc $(FLAG) $(OPTION) libft.h *.c
 	ar rc $(NAME) *.o
 	ranlib $(NAME)
 
