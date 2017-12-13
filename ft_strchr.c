@@ -22,13 +22,13 @@ char	*ft_strchr(const char *str, int c)
 	{
 		chr_null = ft_strlen(str);
 		str = str + chr_null;
-		return (str);
+		return ((char *)str);
 	}
 	chrc = (char)c;
 	while (*str != '\0' || *str != chrc)
 		str++;
 	if (*str == chrc)
-		return (str);
+		return ((char *)str);
 	else
 		return (NULL);
 }

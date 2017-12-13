@@ -19,7 +19,7 @@ void	recursive_putnbr(int nb, int fd)
 	if (nb < 0)
 		ft_putchar_fd(-(nb % 10) + '0', fd);
 	else
-		ft_putchar(nb % 10 + '0', fd);
+		ft_putchar_fd(nb % 10 + '0', fd);
 }
 
 void	ft_putnbr_fd(int nb, int fd)
