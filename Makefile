@@ -52,7 +52,7 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	rm -f *.o
+	rm -f $(DOTO)
 
 fclean: clean
 	rm -f $(NAME)
