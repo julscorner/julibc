@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-void	recursive_putnbr(int nb)
+static void		recursive_putnbr(int nb)
 {
 	if (nb > 9 || nb < -9)
 		recursive_putnbr(nb / 10);

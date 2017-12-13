@@ -12,10 +12,10 @@
 
 #include "libft.h"
 
-void	recursive_putnbr(int nb, int fd)
+static void		recursive_putnbr_fd(int nb, int fd)
 {
 	if (nb > 9 || nb < -9)
-		recursive_putnbr(nb / 10, fd);
+		recursive_putnbr_fd(nb / 10, fd);
 	if (nb < 0)
 		ft_putchar_fd(-(nb % 10) + '0', fd);
 	else
@@ -26,5 +26,5 @@ void	ft_putnbr_fd(int nb, int fd)
 {
 	if (nb < 0)
 		ft_putchar_fd('-', fd);
-	recursive_putnbr(nb, fd);
+	recursive_putnbr_fd(nb, fd);
 }
