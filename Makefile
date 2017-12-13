@@ -44,12 +44,12 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 	ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o\
 	ft_tolower.o ft_toupper.o
 
+all: $(NAME)
+
 $(NAME):
-	gcc $(FLAG) $(OPTION) libft.h $(FUNCTION)
+	gcc $(FLAG) $(OPTION) $(FUNCTION)
 	ar rc $(NAME) $(DOTO)
 	ranlib $(NAME)
-
-all: $(NAME)
 
 clean:
 	rm -f $(DOTO)
