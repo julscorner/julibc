@@ -18,6 +18,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	unsigned int	i;
 	char			*carray;
 
+	i = 0;
 	if (s == NULL)
 		return (NULL);
 	carray = (char *)malloc(len);
