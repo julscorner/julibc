@@ -28,6 +28,6 @@ char	*ft_strrchr(const char *str, int c)
 		len--;
 	if (str[len] == chrc)
 		return (s = s + len);
-	else if (len == 0 && str[len] != chrc)
-		return (NULL);
+//	else if (len == 0 && str[len] != chrc)
+	return (NULL);
 }
