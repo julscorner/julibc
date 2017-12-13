@@ -20,7 +20,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	size_t				index;
 
 	ucdst = (unsigned char*)dst;
-	ucsrc = (const unsigned char*)ucc;
+	ucsrc = (const unsigned char*)src;
+	ucc = (unsigned char)c;
 	index = 0;
 	while (index < n)
 	{

@@ -20,7 +20,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	carray = (char *)malloc(size);
+	carray = (char *)malloc(len);
 	if (carray == NULL)
 		return (NULL);
 	uilen = (unsigned int)len;
