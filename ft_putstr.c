@@ -17,5 +17,8 @@ void	ft_putstr(const char *s)
 	int i;
 
 	i = 0;
-	write(1, &(s[i++]), 1);
+	while (s[i])
+	{
+		write(1, &(s[i++]), 1);
+	}
 }
