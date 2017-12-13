@@ -16,7 +16,7 @@ OPTION = -c
 
 FLAG = -Wall -Werror -Wextra
 
-FUNCTIONS = ft_atoi.c ft_bzero.c ft_isalnum.c \
+FUNCTION = ft_atoi.c ft_bzero.c ft_isalnum.c \
 	ft_isalpha.c ft_isascii.c ft_isdigit.c ft_islower.c ft_isprint.c \
 	ft_isupper.c ft_itoa.c ft_memalloc.c ft_memccpy.c ft_memchr.c ft_memcmp.c \
 	ft_memcpy.c ft_memdel.c ft_memmove.c ft_memset.c ft_putchar.c \
@@ -45,7 +45,7 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o \
 	ft_tolower.o ft_toupper.o \
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) libft.h $(FUNCTIONS)
+	gcc $(FLAG) $(OPTION) libft.h $(FUNCTION)
 	ar rc $(NAME) $(DOTO)
 	ranlib $(NAME)
 
