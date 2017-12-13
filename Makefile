@@ -29,7 +29,7 @@ FUNCTIONS = ft_atoi.c ft_bzero.c ft_isalnum.c \
 	ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c \
 	ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c \
 	ft_tolower.c ft_toupper.c \
-	
+
 DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o \
 	ft_isalpha.o ft_isascii.o ft_isdigit.o ft_islower.o ft_isprint.o \
 	ft_isupper.o ft_itoa.o ft_memalloc.o ft_memccpy.o ft_memchr.o ft_memcmp.o \
