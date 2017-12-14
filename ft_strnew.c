@@ -17,11 +17,11 @@ char	*ft_strnew(size_t size)
 	char	*carray;
 	size_t	csize;
 
-	csize = size + 1;
+	csize = size;
 	if (size == 0)
 		return (NULL);
 	carray = (char *)malloc(sizeof(csize));
-	if (carray == NULL)
+	if (!carray)
 		return (NULL);
 	bzero(carray, csize);
 	return (carray);
