@@ -16,13 +16,15 @@ char	*ft_strnew(size_t size)
 {
 	char	*carray;
 	size_t	csize;
+	size_t	i;
 
-	csize = size;
+	csize = size + 1;
 	if (size == 0)
 		return (NULL);
 	carray = (char *)malloc(sizeof(csize));
 	if (!carray)
 		return (NULL);
-	bzero(carray, csize);
+	while (i <= csize)
+		carray[i++] = '\0';
 	return (carray);
 }
