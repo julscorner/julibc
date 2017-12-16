@@ -24,7 +24,7 @@ char	*ft_strrchr(const char *str, int c)
 	if (chrc == '\0')
 		return (s = s + len);
 	len = len - 1;
-	while (len > 0 || str[len] != chrc)
+	while (len > 1 || str[len] != chrc)
 		len--;
 	if (str[len] == chrc)
 		return (s = s + len);
