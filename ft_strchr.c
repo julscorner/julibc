@@ -15,20 +15,22 @@
 char	*ft_strchr(const char *str, int c)
 {
 	char	chrc;
+	char	*s;
 	int		chr_null;
 
 	chrc = (char)c;
+	s = str;
 	chr_null = 0;
-//	if (c == 0)
-//	{
-//		chr_null = ft_strlen(str);
-//		str = str + chr_null;
-//		return ((char *)str);
-//	}
-	while (*str != '\0' || *str != chrc)
-		str++;
-	if (*str == chrc)
-		return ((char *)str);
+	if (c == 0)
+	{
+		chr_null = ft_strlen(str);
+		s = s + chr_null;
+		return ((char *)s);
+	}
+	while (*s != '\0' || *s != chrc)
+		s++;
+	if (*s == chrc)
+		return ((char *)s);
 	else
 		return (NULL);
 }
