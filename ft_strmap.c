@@ -20,7 +20,7 @@ char	*ft_strmap(const char *s, char (*f)(char))
 	i = 0;
 	if (!s || !f)
 		return (NULL);
-	s_fresh = ft_strnew(ft_strlen(s));
+	s_fresh = (char *)malloc(sizeof(char) * (ft_strlen(s));
 	if (s_fresh == NULL)
 		return (NULL);
 	ft_strcpy(s_fresh, s);
@@ -29,5 +29,6 @@ char	*ft_strmap(const char *s, char (*f)(char))
 		s_fresh[i] = f(s[i]);
 		i++;
 	}
+	s_fresh[i] = '\0';
 	return (s_fresh);
 }
