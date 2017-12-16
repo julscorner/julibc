@@ -35,5 +35,6 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 		s_fresh[i] = f(i, s[i]);
 		i++;
 	}
+	s_fresh[i] = '\0';
 	return (s_fresh);
 }
