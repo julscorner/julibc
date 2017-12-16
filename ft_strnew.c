@@ -18,6 +18,7 @@ char	*ft_strnew(size_t size)
 	size_t	csize;
 	size_t	i;
 
+	i = 0;
 	csize = size + 1;
 	if (size == 0)
 		return (NULL);
