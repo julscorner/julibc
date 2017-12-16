@@ -25,7 +25,11 @@ char	*ft_strnew(size_t size)
 	carray = (char *)malloc(sizeof(csize));
 	if (!carray)
 		return (NULL);
-	while (i < csize)
-		carray[i++] = '\0';
+	while (csize > 0)
+	{
+		carray[i] = '\0';
+		i++;
+		csize--;
+	}
 	return (carray);
 }
