@@ -22,14 +22,8 @@ char	*ft_strnew(size_t size)
 	csize = size + 1;
 	if (size == 0)
 		return (NULL);
-	carray = (char *)malloc(sizeof(csize));
+	carray = (char *)ft_memalloc(csize);
 	if (!carray)
 		return (NULL);
-	while (csize > 0)
-	{
-		carray[i] = '\0';
-		i++;
-		csize--;
-	}
 	return (carray);
 }
