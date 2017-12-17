@@ -22,15 +22,10 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	j = 0;
 	if (!s || !f)
 		return (NULL);
-	s_fresh = ft_strnew(ft_strlen(s));
+	s_fresh = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
 	if (s_fresh == NULL)
 		return (NULL);
-	while (s[j])
-	{
-		s_fresh[j] = s[j];
-		j++;
-	}
-	while (s[i])
+ 	 while (s[i])
 	{
 		s_fresh[i] = f(i, s[i]);
 		i++;
