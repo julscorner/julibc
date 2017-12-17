@@ -16,21 +16,22 @@ char	*ft_strchr(const char *str, int c)
 {
 	char	chrc;
 	char	*s;
-	int		chr_null;
+	char		chr_null;
+	int		i;
 
 	chrc = (char)c;
 	s = (char *)str;
-	chr_null = 0;
-	if (c == 0)
+	chr_null = '\0';
+	i = 0;
+	if (c == '\0')
 	{
 		chr_null = ft_strlen(str);
 		s = s + chr_null;
 		return ((char *)s);
 	}
 	while (*s != '\0' || *s != chrc)
-		s++;
+		i++;
 	if (*s == chrc)
-		return ((char *)s);
-	else
-		return (NULL);
+		return ((char *)(s + i));
+	return (NULL);
 }
