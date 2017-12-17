@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	get_str_len(int n)
+static size_t	this_strlen(int n)
 {
 	size_t		i;
 
@@ -25,21 +25,22 @@ static size_t	get_str_len(int n)
 char			*ft_itoa(int n)
 {
 	char			*str;
-	size_t			str_len;
+	size_t			len;
 	unsigned int	n_cpy;
 
-	str_len = get_str_len(n);
+	len = this_strlen(n);
 	n_cpy = n;
 	if (n < 0)
 	{
-		n_cpy = -n;
-		str_len++;
+		n_cpy = - n;
+		len++;
 	}
-	if (!(str = ft_strnew(str_len)))
+	str = ft_strnew(len)
+	if (!str)
 		return (NULL);
-	str[--str_len] = n_cpy % 10 + '0';
+	str[--len] = n_cpy % 10 + '0';
 	while (n_cpy /= 10)
-		str[--str_len] = n_cpy % 10 + '0';
+		str[--len] = n_cpy % 10 + '0';
 	if (n < 0)
 		*(str + 0) = '-';
 	return (str);
