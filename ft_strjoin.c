@@ -24,14 +24,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	s1_len = ft_strlen(s1);
 	s2_len = ft_strlen(s2);
-	new_str = ft_strnew(s1_len + s2_len);
-	if (!new_str)
+	new_str = ft_strnew(s1_len + s2_len + 1);
+	if (new_str == NULL)
 		return (NULL);
-	i = -1;
-	j = -1;
-	while (++i < s1_len)
+	i = 0;
+	j = 0;
+	while (i++ < s1_len)
 		*(new_str + i) = *(s1 + i);
-	while (++j < s2_len)
+	while (j++ < s2_len)
 		*(new_str + i++) = *(s2 + j);
 	return (new_str);
 }
