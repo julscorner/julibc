@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static size_t	this_strlen(int n)
+static size_t	intlen_base_ten(int n)
 {
 	size_t		i;
 
@@ -28,7 +28,7 @@ char			*ft_itoa(int n)
 	size_t			len;
 	unsigned int	n_cpy;
 
-	len = this_strlen(n);
+	len = intlen_base_ten(n);
 	n_cpy = n;
 	if (n < 0)
 	{
@@ -38,9 +38,16 @@ char			*ft_itoa(int n)
 	str = ft_strnew(len)
 	if (!str)
 		return (NULL);
-	str[--len] = n_cpy % 10 + '0';
-	while (n_cpy /= 10)
-		str[--len] = n_cpy % 10 + '0';
+	 if (n == 0)
+    	{
+        	str[i++] = '0';
+        	str[i] = '\0';
+        	return (str);
+    	}
+	len = len - 1;
+	str[len--] = n_cpy % 10 + '0';
+	while (n_cpy = n_cpy / 10)
+		str[len--] = n_cpy % 10 + '0';
 	if (n < 0)
 		*(str + 0) = '-';
 	return (str);
