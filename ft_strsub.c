@@ -21,11 +21,11 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	i = 0;
 	if (s == NULL)
 		return (NULL);
-	carray = (char *)malloc(len);
+	carray = (char *)malloc(sizeof(len));
 	if (carray == NULL)
 		return (NULL);
 	uilen = (unsigned int)len;
-	while (i < uilen)
+	while (i <= uilen)
 	{
 		carray[i] = s[start + i];
 		i++;

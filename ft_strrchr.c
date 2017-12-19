@@ -27,7 +27,10 @@ char	*ft_strrchr(const char *str, int c)
 	while (len > 0 || str[len] != chrc)
 		--len;
 	if (str[len] == chrc)
-		return ((char *)s = s + len);
+	{
+		s = s + len;
+		return ((char *)s);
+	}
 //	else if (len == 0 && str[len] != chrc)
 	return (NULL);
 }

@@ -27,15 +27,17 @@ char			*ft_itoa(int n)
 	char			*str;
 	size_t			len;
 	unsigned int	n_cpy;
+	unsigned int	i;
 
 	len = intlen_base_ten(n);
 	n_cpy = n;
+	i = 0;
 	if (n < 0)
 	{
 		n_cpy = - n;
 		len++;
 	}
-	str = ft_strnew(len)
+	str = ft_strnew(len);
 	if (!str)
 		return (NULL);
 	 if (n == 0)
@@ -46,7 +48,7 @@ char			*ft_itoa(int n)
     	}
 	len = len - 1;
 	str[len--] = n_cpy % 10 + '0';
-	while (n_cpy = n_cpy / 10)
+	while (n_cpy /= 10)
 		str[len--] = n_cpy % 10 + '0';
 	if (n < 0)
 		*(str + 0) = '-';

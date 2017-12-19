@@ -24,7 +24,7 @@ char	*ft_strtrim(const char *s)
 	while (*s == ' ' || *s == '\n' || *s == '\t')
 		s++;
 	i = ft_strlen(s) - 1;
-	if (s[0] == ´\0´)
+	if (s[0] == '\0')
 		return (ft_strnew(0));
 	while (!s[i] || s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
 		i--;
