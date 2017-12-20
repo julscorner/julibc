@@ -6,13 +6,13 @@
 #    By: jmurte <marvin@42.fr>                      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/12/02 09:44:28 by jmurte            #+#    #+#              #
-#    Updated: 2017/12/19 16:14:42 by jmurte           ###   ########.fr        #
+#    Updated: 2017/12/19 16:32:27 by jmurte           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-OPTION = -c
+OPTION = -c -I
 
 FLAG = -Wall -Werror -Wextra
 
@@ -49,7 +49,7 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) $(FUNCTION)
+	gcc $(FLAG) $(OPTION) libft.h $(FUNCTION)
 	ar rc $(NAME) $(DOTO)
 	ranlib $(NAME)
 
