@@ -6,7 +6,7 @@
 /*   By: jmurte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 02:43:01 by jmurte            #+#    #+#             */
-/*   Updated: 2017/12/10 03:51:26 by jmurte           ###   ########.fr       */
+/*   Updated: 2017/12/19 15:21:19 by jmurte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static int			ft_countwords(char const *str, char c)
 	return (count);
 }
 
-static int	word_len(char const *str, char c)
+static int			word_len(char const *str, char c)
 {
 	int		i;
 	int		len;
@@ -48,7 +48,7 @@ static int	word_len(char const *str, char c)
 	return (len);
 }
 
-char		**ft_strsplit(char const *s, char c)
+char				**ft_strsplit(char const *s, char c)
 {
 	int		i;
 	int		j;

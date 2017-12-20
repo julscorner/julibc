@@ -6,7 +6,7 @@
 /*   By: jmurte <jmurte@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/01 21:44:10 by jmurte            #+#    #+#             */
-/*   Updated: 2017/12/10 03:15:48 by jmurte           ###   ########.fr       */
+/*   Updated: 2017/12/19 15:16:27 by jmurte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,13 +27,12 @@ char	*ft_strrchr(const char *str, int c)
 		return ((char *)s);
 	}
 	len = len - 1;
-	while (len > 0 &&  str[len] != chrc)
+	while (len > 0 && str[len] != chrc)
 		len--;
 	if (str[len] == chrc)
 	{
 		s = s + len;
 		return ((char *)s);
 	}
-//	else if (len == 0 && str[len] != chrc)
 	return (NULL);
 }

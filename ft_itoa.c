@@ -6,7 +6,7 @@
 /*   By: jmurte <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/10 02:33:24 by jmurte            #+#    #+#             */
-/*   Updated: 2017/12/10 03:31:53 by jmurte           ###   ########.fr       */
+/*   Updated: 2017/12/19 15:28:03 by jmurte           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,27 +27,23 @@ char			*ft_itoa(int n)
 	char			*str;
 	size_t			len;
 	unsigned int	n_cpy;
-	unsigned int	i;
 
 	len = intlen_base_ten(n);
 	n_cpy = n;
-	i = 0;
 	if (n < 0)
 	{
-		n_cpy = - n;
+		n_cpy = -n;
 		len++;
 	}
-	str = ft_strnew(len);
-	if (!str)
+	if (!(str = ft_strnew(len)))
 		return (NULL);
-	 if (n == 0)
-    	{
-        	str[i++] = '0';
-        	str[i] = '\0';
-        	return (str);
-    	}
-	len = len - 1;
-	str[len--] = n_cpy % 10 + '0';
+	if (n == 0)
+	{
+		str[0] = '0';
+		str[1] = '\0';
+		return (str);
+	}
+	str[--len] = n_cpy % 10 + '0';
 	while (n_cpy /= 10)
 		str[len--] = n_cpy % 10 + '0';
 	if (n < 0)
