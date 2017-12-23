@@ -29,7 +29,8 @@ FUNCTION = ft_atoi.c ft_bzero.c ft_isalnum.c\
 	ft_strnequ.c ft_strnew.c ft_strnstr.c ft_strrchr.c\
 	ft_strsplit.c ft_strstr.c ft_strsub.c ft_strtrim.c\
 	ft_tolower.c ft_toupper.c\
-	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c
+	ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c\
+	ft_lstiter.c ft_lstmap.c
 
 DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 	ft_isalpha.o ft_isascii.o ft_isdigit.o ft_isprint.o\
@@ -44,7 +45,8 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 	ft_strnequ.o ft_strnew.o ft_strnstr.o ft_strrchr.o\
 	ft_strsplit.o ft_strstr.o ft_strsub.o ft_strtrim.o\
 	ft_tolower.o ft_toupper.o\
-	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o
+	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o\
+	ft_lstiter.o ft_lstmap.o
 
 all: $(NAME)
 
