@@ -48,6 +48,7 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 	ft_lstnew.o ft_lstdelone.o ft_lstdel.o ft_lstadd.o\
 	ft_lstiter.o ft_lstmap.o
 
+
 all: $(NAME)
 
 $(NAME):
