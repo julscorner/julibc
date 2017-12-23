@@ -52,7 +52,7 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) libft.h $(FUNCTION)
+	gcc $(FLAG) $(OPTION) $(FUNCTION)
 	ar rc $(NAME) $(DOTO)
 	ranlib $(NAME)
 
