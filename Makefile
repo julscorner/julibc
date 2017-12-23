@@ -12,7 +12,7 @@
 
 NAME = libft.a
 
-OPTION = -c -I
+OPTION = -c
 
 FLAG = -Wall -Werror -Wextra
 
@@ -52,7 +52,7 @@ DOTO = ft_atoi.o ft_bzero.o ft_isalnum.o\
 all: $(NAME)
 
 $(NAME):
-	gcc $(FLAG) $(OPTION) $(FUNCTION)
+	gcc $(FLAG) $(OPTION) libft.h $(FUNCTION)
 	ar rc $(NAME) $(DOTO)
 	ranlib $(NAME)
 
