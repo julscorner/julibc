@@ -20,8 +20,6 @@ char	*ft_strnew(size_t size)
 
 	i = 0;
 	csize = size + 1;
-	if (size == 0)
-		return (NULL);
 	carray = (char *)ft_memalloc(csize);
 	if (!carray)
 		return (NULL);
