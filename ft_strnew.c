@@ -16,7 +16,6 @@ char	*ft_strnew(size_t size)
 {
 	char	*carray;
 	size_t	csize;
-	size_t	i;
 
 	i = 0;
 	csize = size + 1;
