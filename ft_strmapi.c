@@ -18,7 +18,6 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 	unsigned int	i;
 
 	i = 0;
-	j = 0;
 	if (!s || !f)
 		return (NULL);
 	s_fresh = (char *)malloc(sizeof(char) * (ft_strlen(s) + 1));
