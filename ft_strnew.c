@@ -17,7 +17,6 @@ char	*ft_strnew(size_t size)
 	char	*carray;
 	size_t	csize;
 
-	i = 0;
 	csize = size + 1;
 	carray = (char *)ft_memalloc(csize);
 	if (!carray)
