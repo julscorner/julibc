@@ -16,7 +16,6 @@ char	*ft_strmapi(const char *s, char (*f)(unsigned int, char))
 {
 	char			*s_fresh;
 	unsigned int	i;
-	unsigned int	j;
 
 	i = 0;
 	j = 0;
